@@ -1,9 +1,13 @@
 app.config(function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('/recipies');
+  $urlRouterProvider.otherwise('/recipe-list');
 
   $stateProvider
     .state('recipeList', {
-      url: '/recipies',
+      url: '/recipe-list',
       templateUrl: '../partials/recipe-list.html'
+    })
+    .state('createRecipe', {
+      url: '/create-recipe',
+      templateUrl: '../partials/create-recipe.html'
     })
 });

@@ -9,4 +9,7 @@ var app = angular.module('app', [
   $scope.recipieList = [];
 })
 
+.controller('createRecipe', function($scope) {
+ $scope.recipe = {};
+ 
 });

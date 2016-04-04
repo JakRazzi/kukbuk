@@ -1,0 +1,27 @@
+<section>
+  <h1>Create a Recipe!</h1>
+  
+  <form ng-submit='createRecipe'>
+
+    <input type="text" ng-model="recipe.name" placeholder="Name Your Recipe"></input>
+    <h1> {{ recipe.name }} </h1>
+
+    <textarea ng-model="recipe.description" placeholder="Add a Description"></textarea>
+    <p> {{ recipe.description }} </p>
+
+    <span>
+      <input type="text" ng-model="recipe.ingredients" placeholder="Ingredient"></input>
+      <input type="text" ng-model="recipe.ingredients" placeholder="Quantity"></input>
+      <button ng-click="">add</button>
+    </span>
+    <li ng-repeat="(ingredient, quantity) in recipe.ingredients">
+        <p> {{ ingredient }} <em> {{ quantity }} </em> </p>
+    </li>
+
+    <p> </p>
+
+    <textarea ng-model="recipe.instructions" placeholder="Add Instructions"></textarea>
+    <p> {{ recipe.instructions }} </p>
+
+  </form>
+</section>
