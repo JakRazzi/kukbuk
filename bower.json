@@ -1,0 +1,18 @@
+{
+  "name": "kukbuk",
+  "description": "KukBuk is an app for creating and accessing recipes anywhere",
+  "main": "index.js",
+  "authors": [
+    "Jak Buttarazzi"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/JakRazzi/kukbuk",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

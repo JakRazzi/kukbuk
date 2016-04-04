@@ -1,0 +1,24 @@
+{
+  "name": "kukbuk",
+  "version": "0.0.0",
+  "description": "KukBuk is an app for creating and accessing recipes anywhere",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakRazzi/kukbuk.git"
+  },
+  "author": "Jak Buttarazzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakRazzi/kukbuk/issues"
+  },
+  "homepage": "https://github.com/JakRazzi/kukbuk#readme"
+}
