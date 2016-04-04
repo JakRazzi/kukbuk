@@ -1,0 +1,14 @@
+<section ng-controller="recipeList">
+
+  <h1>Recipies</h1>
+
+  <input type="search" ng-model="search" placeholder="search"></input>
+
+  <ul>
+    <li ng-repeat="recipe in recipeList | filter:search">
+      <h3 ui-view=""> {{ recipe.name }} </h3>
+      <p> {{ recipe.description }} </p>
+    </li>
+  </ul>
+  
+</section>

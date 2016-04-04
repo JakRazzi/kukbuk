@@ -4,22 +4,30 @@
   <meta charset="UTF-8">
   <title>KukBuk</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-</head>
-<body ng-app>
-  <header class="container">
-    <h1>KukBuk</h1>
-    <nav>
-      <li>Recipies</li>
-      <li>Create</li>
-    </nav>
-  </header>
 
-<div ui-view>
+  <script src="src/app.js"></script>
+  <script src="src/routes.js"></script>
+</head>
+<body ng-app="app">
+
+  <div class="container">
+    <header >
+      <h1>KukBuk</h1>
+      <nav class="list-inline">
+        <a ui-sref="recipe-list">All Recipies</a>
+        <a ui-sref="create">Create</a>
+      </nav>
+    </header>
+
+    <div ui-view></div>
+
+  </div>
   
 </body>
 </html>
