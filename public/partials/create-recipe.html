@@ -1,7 +1,7 @@
-<section>
+<section ng-controller="createRecipe">
   <h1>Create a Recipe!</h1>
   
-  <form ng-submit='createRecipe'>
+  <form>
 
     <input type="text" ng-model="recipe.name" placeholder="Name Your Recipe"></input>
     <h1> {{ recipe.name }} </h1>
@@ -10,18 +10,20 @@
     <p> {{ recipe.description }} </p>
 
     <span>
-      <input type="text" ng-model="recipe.ingredients" placeholder="Ingredient"></input>
-      <input type="text" ng-model="recipe.ingredients" placeholder="Quantity"></input>
-      <button ng-click="">add</button>
+      <input type="text" ng-model="ingredient.name" placeholder="Ingredient"></input>
+      <input type="text" ng-model="ingredient.quantity" placeholder="Quantity"></input>
+      <button ng-click="addIngredient()">add</button>
     </span>
-    <li ng-repeat="(ingredient, quantity) in recipe.ingredients">
-        <p> {{ ingredient }} <em> {{ quantity }} </em> </p>
+    <li ng-repeat="ingredient in recipe.ingredients">
+        <p> {{ ingredient.name }} <strong> {{ ingredient.quantity }} </strong> </p>
     </li>
 
     <p> </p>
 
     <textarea ng-model="recipe.instructions" placeholder="Add Instructions"></textarea>
     <p> {{ recipe.instructions }} </p>
+
+    <button ng-click="submitRecipe()">Submit</button>
 
   </form>
 </section>

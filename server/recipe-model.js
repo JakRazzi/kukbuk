@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var recipeSchema = mongoose.schema({
+var recipeSchema = mongoose.Schema({
   name: String,
   description: String,
   ingredients: {
