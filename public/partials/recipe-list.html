@@ -6,7 +6,7 @@
 
   <ul>
     <li ng-repeat="recipe in recipeList | filter:search">
-      <h3 ui-view=""> {{ recipe.name }} </h3>
+      <h3 ng-click="goToRecipe(recipe)"> {{ recipe.name }} </h3>
       <p> {{ recipe.description }} </p>
     </li>
   </ul>

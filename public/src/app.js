@@ -5,11 +5,16 @@ var app = angular.module('app', [
   'ui.bootstrap'
 ])
 
-.controller('recipeList', function($scope, RecipeHandler) {
+.controller('recipeList', function($scope, $window, RecipeHandler) {
   var init = function() {
     RecipeHandler.getAll(function(recipies) {
       $scope.recipeList = recipies;
     })
+  };
+
+  $scope.goToRecipe = function(recipe) {
+    RecipeHandler.setTemp(recipe);
+    $window.location.href = '/#/view-recipe'
   };
 
   init();
