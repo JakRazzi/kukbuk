@@ -10,4 +10,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/create-recipe',
       templateUrl: '../partials/create-recipe.html'
     })
+    .state('viewRecipe', {
+      url: '/view-recipe',
+      templateUrl: '../partials/view-recipe.html'
+    })
 });

@@ -1,0 +1,14 @@
+<section ng-controller='viewRecipe'>
+  <h1> {{ recipe.name }} </h1>
+
+  <p> {{ recipe.description }} </p>
+
+  <ul>
+    <li ng-repeat="ingredient in recipe.ingredients">
+        <p> {{ ingredient.name }} <em> {{ ingredient.quantity }} </em> </p>
+    </li>
+  </ul>
+
+  <p> {{ recipe.instructions }} </p>
+
+</section>
