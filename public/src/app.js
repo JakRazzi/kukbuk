@@ -5,8 +5,14 @@ var app = angular.module('app', [
   'ui.bootstrap'
 ])
 
-.controller('recipeList', function($scope) {
-  $scope.recipeList = {};
+.controller('recipeList', function($scope, RecipeHandler) {
+  var init = function() {
+    RecipeHandler.getAll(function(recipies) {
+      $scope.recipeList = recipies;
+    })
+  };
+
+  init();
 })
 
 .controller('createRecipe', function($scope, $window, RecipeHandler) {
@@ -50,8 +56,9 @@ var app = angular.module('app', [
 
   var post = function(recipe) {
     setTemp(recipe);
+
     return $http({
-      method: 'Post',
+      method: 'POST',
       url: '/api/recipies',
       data: recipe
     })
@@ -63,6 +70,19 @@ var app = angular.module('app', [
     })
   }
 
+  var getAll = function(callback) {
+    return $http({
+      method: 'GET',
+      url: '/api/recipies',
+    })
+    .then(function(response) {
+      callback(response.data);
+    })
+    .catch(function(err) {
+      console.error(err);
+    })
+  };
+
   var setTemp = function(recipe) {
     tempRecipe = recipe;
   }
@@ -72,6 +92,7 @@ var app = angular.module('app', [
 
   return {
     post: post,
+    getAll: getAll,
     setTemp: setTemp,
     getTemp: getTemp
   }

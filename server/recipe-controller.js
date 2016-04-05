@@ -4,6 +4,7 @@ module.exports = {
   getRecipies: function(req, res) {
     Recipe.find()
     .exec(function(err, recipies) {
+      if (err) return console.error(err);
       res.send(recipies);
     })
   },
