@@ -5,10 +5,12 @@
   "main": "index.js",
   "engines": {
     "node": "0.12.12"
-    },
+  },
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "bower": "^1.7.7",
     "express": "^4.13.4",
-    "bower": "^1.7.7"
+    "mongoose": "^4.4.11"
   },
   "devDependencies": {},
   "scripts": {
