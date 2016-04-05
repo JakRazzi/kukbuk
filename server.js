@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-mongoose.connect(process.env.MONGO_UI || 'mongodb://localhost/kukbuk-test');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/kukbuk-test');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
