@@ -10,4 +10,4 @@ var recipeSchema = mongoose.Schema({
   instructions: String
 })
 
-module.exports.Recipe = mongoose.model('Recipe', recipeSchema);
+module.exports = mongoose.model('Recipe', recipeSchema);
