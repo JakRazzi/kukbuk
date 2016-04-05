@@ -12,8 +12,8 @@
 
 ## "I lost my recipe notebook when I moved to a new city. KukBuk is my answer to that" - Jak Buttarazzi ##
 
-## Getting started with KukBuk is easy. Just sign in to view all of your recipies, and click add to create a new recipe. ##
+## Getting started with KukBuk is easy. Just sign in to view all of your recipes, and click add to create a new recipe. ##
 
-## "I was constantly losing my recipies and forgeting old favorites. KukBuk saved me" -Hypothetical User ##
+## "I was constantly losing my recipes and forgeting old favorites. KukBuk saved me" -Hypothetical User ##
 
-## If you're ready to simplify your list of recipies, then go to kukbuk.heroku.com and start adding your favorite recipies. ##
+## If you're ready to simplify your list of recipes, then go to kukbuk.heroku.com and start adding your favorite recipes. ##

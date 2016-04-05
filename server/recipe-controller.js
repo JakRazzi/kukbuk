@@ -1,11 +1,11 @@
 var Recipe = require('./recipe-model.js');
 
 module.exports = {
-  getRecipies: function(req, res) {
+  getRecipes: function(req, res) {
     Recipe.find()
-    .exec(function(err, recipies) {
+    .exec(function(err, recipes) {
       if (err) return console.error(err);
-      res.send(recipies);
+      res.send(recipes);
     })
   },
 

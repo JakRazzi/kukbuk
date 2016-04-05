@@ -7,8 +7,8 @@ var app = angular.module('app', [
 
 .controller('recipeList', function($scope, $window, RecipeHandler) {
   var init = function() {
-    RecipeHandler.getAll(function(recipies) {
-      $scope.recipeList = recipies;
+    RecipeHandler.getAll(function(recipes) {
+      $scope.recipeList = recipes;
     })
   };
 
@@ -64,7 +64,7 @@ var app = angular.module('app', [
 
     return $http({
       method: 'POST',
-      url: '/api/recipies',
+      url: '/api/recipes',
       data: recipe
     })
     .then(function(recipe) {
@@ -78,7 +78,7 @@ var app = angular.module('app', [
   var getAll = function(callback) {
     return $http({
       method: 'GET',
-      url: '/api/recipies',
+      url: '/api/recipes',
     })
     .then(function(response) {
       callback(response.data);
