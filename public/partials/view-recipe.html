@@ -1,14 +1,28 @@
 <section ng-controller='viewRecipe'>
-  <h1> {{ recipe.name }} </h1>
 
-  <p> {{ recipe.description }} </p>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1> {{ recipe.name }} </h1>
+      <h4> {{ recipe.description }} </h4>
+    </div>
+  </div>
 
-  <ul>
-    <li ng-repeat="ingredient in recipe.ingredients">
-        <p> {{ ingredient.name }} <em> {{ ingredient.quantity }} </em> </p>
-    </li>
-  </ul>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h2>Ingredients</h2>
+      <ul>
+        <li ng-repeat="item in recipe.ingredients">
+          <p> <strong>{{ item.name }}</strong>  |  {{ item.quantity }} </p>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-  <p> {{ recipe.instructions }} </p>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h2>Instructions</h2>
+      <h4> {{ recipe.instructions }} </h4>
+    </div>
+  </div>
 
 </section>
