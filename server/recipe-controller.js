@@ -15,5 +15,18 @@ module.exports = {
       if (err) return console.error(err);
       res.sendStatus(200);
     })
+  },
+
+  deleteRecipe: function(req, res) {
+    if (req.body.password !== 'romulusdogulus') {
+      res.sendStatus(500);
+      return;
+    }
+    console.log(req.body.data);
+    Recipe.find({name: req.body.data}).remove()
+    .exec(function(err) {
+      if (err) return console.error(err);
+      res.sendStatus(200);
+    });
   }
 };
