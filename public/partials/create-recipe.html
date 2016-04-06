@@ -18,22 +18,20 @@
     </div>
 
     <br>
-
-    <form name="ingredientForm" novalidate>      
-      <div class="row">
-        <div class="col-md-4 col-md-offset-2">
-          <input class="form-control" type="text" ng-model="ingredient.name" placeholder="Ingredient" required></input>
-        </div>
-        <div class="col-md-4">
-          <div class="input-group">
-            <input class="form-control" type="text" ng-model="ingredient.quantity" placeholder="Quantity" required></input>
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-secondary" ng-disabled="ingredientForm.$invalid" ng-click="addIngredient()">add</button>
-            </span>
-          </div>
+   
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+        <input class="form-control" type="text" ng-model="ingredient.name" placeholder="Ingredient"></input>
+      </div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <input class="form-control" type="text" ng-model="ingredient.quantity" placeholder="Quantity"></input>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-secondary" ng-disabled="ingredientForm.$invalid" ng-click="addIngredient()">add</button>
+          </span>
         </div>
       </div>
-    </form>
+    </div>
 
     <br>
 
